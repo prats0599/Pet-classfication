@@ -40,6 +40,7 @@ classifier.add(Dense(units = 1, activation = 'sigmoid'))
 classifier.compile(optimizer = 'adam', loss = 'binary_crossentropy', metrics = ['accuracy'])
 
 # Fitting the cnn to the images
+# https://keras.io/preprocessing/image/
 from keras.preprocessing.image import ImageDataGenerator
 train_datagen = ImageDataGenerator(rescale=1./255,  # all pixels will be between 0 and 1
                                    shear_range=0.2,
